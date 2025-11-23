@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+ <script src="https://proff.com/react@16/umd/react.production.min.js"></script>
+  <script src="https://proff.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://proff.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <body>
+  
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+      class Hello extends React.Component {
+        render() {
+          return <h1>Hello World!</h1>
+        }
+      }
+
+      ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+    </script>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>Hello, World!</title>
+</head>
+<body bgcolor="solidblack">
+  <h1>
+   Distingtion b/w Data and infiormation
+  </h1>
+ 
+ <img src="x.jpg" alt="young" width="350px" height="150px;"></style>
+
+  <img src="ee.png"video width="420" height="240"><video width="320" height="240" controls>
+  <source src="t.mp4" type="video/mp4">
+  <source src="t.ogg" type="video/ogg"></video>
+ 
+
+  
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text"><br>
+  <label for="sname">others name</label>
+  <input type="text">
+</form>
+<form>
+  <label for="gsearch">Search Google:</label>
+  <input type="search" id="gsearch" name="gsearch">
+</form>
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+
+<script>
+var w;
+
+function startWorker() {
+  if (typeof(Worker) !== "undefined") {
+    if (typeof(w) == "undefined") {
+      w = new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
+  }
+}
+
+function stopWorker() {
+  w.terminate();
+  w = undefined;
+}
+</script>
+  
+<iframe width="420" height="315"
+src="https://www.youtube.com/Let's make a playlist together. Join to add videos: Young https://www.youtube.com/playlist?list=PLBrhvmoWJTopTA90Q-epYA1qlFKKD3owJ&jct=kkX45EHBg6u9f_rocMbg5g/tgbNymZ7vqY?controls=0">
+</iframe>
